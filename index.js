@@ -37,7 +37,6 @@ async function ejecutarPromesas() {
         console.log(error);
     }
 }
-
 ejecutarPromesas();
 
 // async function obtenerJson() {
@@ -50,3 +49,7 @@ ejecutarPromesas();
 
 
 // Parte2
+fetch('nombres.json')
+.then((respuesta) => respuesta.json())
+.then((resultadoFinal) => console.log(resultadoFinal));
+
