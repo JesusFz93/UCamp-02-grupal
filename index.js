@@ -48,12 +48,19 @@ fetch('nombres.json')
 // Parte3
 async function obtenerJson() {
     try {
+
+        const campos = document.getElementById('campos');
+
         const resp = await fetch('nombres.json');
         const data = await resp.json();
         console.log(data.nombres);
 
+        // Parte4
         data.nombres.forEach(valor => {
-            console.log(valor.nombre)
+            const option = document.createElement('option');
+            option.value = valor.nombre;
+            option.textContent = valor.nombre;
+            campos.appendChild(option);
         });
 
         
