@@ -50,7 +50,14 @@ async function obtenerJson() {
     try {
         const resp = await fetch('nombres.json');
         const data = await resp.json();
-        console.log(data);
+        console.log(data.nombres);
+
+        data.nombres.forEach(valor => {
+            console.log(valor.nombre)
+        });
+
+        
+
     } catch (error) {
         console.log(error);
     }
