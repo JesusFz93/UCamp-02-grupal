@@ -39,17 +39,21 @@ async function ejecutarPromesas() {
 }
 ejecutarPromesas();
 
-// async function obtenerJson() {
-//     const resp = await fetch('nombres.json');
-//     const data = await resp.json();
-//     console.log(data);
-// }
-
-// obtenerJson() ;
-
 
 // Parte2
 fetch('nombres.json')
 .then((respuesta) => respuesta.json())
 .then((resultadoFinal) => console.log(resultadoFinal));
 
+// Parte3
+async function obtenerJson() {
+    try {
+        const resp = await fetch('nombres.json');
+        const data = await resp.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+obtenerJson();
