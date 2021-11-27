@@ -30,7 +30,8 @@ async function ejecutarPromesas() {
 
         const estadosDeMexico = getEstados.filter(estado => estado.idPais === 1);
         const estadosDeMexicoMayus = estadosDeMexico.map(estado => estado.nombre.toUpperCase());
-        
+
+        console.log(getPaises);
         console.log(estadosDeMexicoMayus);
     }
     catch (error) {
